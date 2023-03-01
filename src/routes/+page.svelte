@@ -1,4 +1,7 @@
 <script>
+    /** @type {import('./$types').GET} */
+    export let data;
+
     import welcome from '$lib/images/svelte-welcome.webp';
     import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -15,7 +18,7 @@
     <!--	</picture>-->
     <div class="hero-content text-center m-auto bg-base">
         <h1 class="font-inter title font-light uppercase">
-            <span class="font-light italic">CREA</span>
+            <span class="font-light italic">{data.Title}</span>
             <span class="font-thin">LION</span>
         </h1>
     </div>
@@ -23,7 +26,7 @@
         <h2 class="m-auto font-source uppercase font-source text-3xl font-normal text-white">L'art de créer à partir de rien</h2>
     </div>
 </section>
-<section class="hero min-h-screen" style="background-image: url('bg.jpg');">
+<section class="hero min-h-screen" style="background-image: url('https://crealion-backend.fly.dev/uploads/bg_dcdfd1b356.jpg');">
     <div class="hero-overlay bg-opacity-5"></div>
     <div class="hero-content text-center text-neutral-content">
         <div class="max-w-md">
