@@ -1,15 +1,16 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-    const homeResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/home?populate=*`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact?populate=*`, {
         headers: {
             Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
             Accept: 'application/json',
         },
     })
 
-    const home = await homeResponse.json()
+    const result = await response.json()
 
     return {
-        home: home.data.attributes
+        contact: result.data.attributes,
+        url: import.meta.env.VITE_API_URL
     }
 }

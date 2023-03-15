@@ -36,7 +36,7 @@
         </div>
 
         <!-- Page content here -->
-        <slot/>
+        <slot nav={data.nav}/>
         <Footer nav={data.nav}/>
 
     </div>

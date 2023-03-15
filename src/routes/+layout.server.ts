@@ -2,7 +2,7 @@
 export async function load() {
     const navigation = [
         {
-            url: "about",
+            url: "story",
             name: "mon histoire"
         },
         {
