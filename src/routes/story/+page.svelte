@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-    <title>My Story</title>
-    <meta name="description" content="About page"/>
+    <title>{data.page.Head.title}</title>
+    <meta name="description" content="{data.page.Head.content}"/>
 </svelte:head>
 
 <section class="hero min-h-screen">
@@ -28,10 +28,6 @@
             <div class="flex text-3xl justify-center">
                 <h1 class="font-inter p-2">
                     {data.story.name}
-                </h1>
-                <h1 class="font-inter p-2">
-                    <span class="font-light uppercase">r</span>
-                    <span class="font-thin">ouzé</span>
                 </h1>
             </div>
             <p class="mb-5">
