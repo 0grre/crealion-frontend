@@ -19,7 +19,7 @@ export async function load() {
         },
     })
 
-    const show = await showResponse.json()
+    const showResult = await showResponse.json()
 
     const eventsResponse = await fetch(`${url}/api/events?populate=*`, {
         headers: {
@@ -28,12 +28,12 @@ export async function load() {
         },
     })
 
-    const events = await eventsResponse.json()
+    const eventsResult = await eventsResponse.json()
 
     return {
-        show: show.data.attributes,
-        events: events.data,
+        show: showResult.data.attributes,
         page: pageResult.data.attributes,
+        events: eventsResult.data,
         url: url
     }
 }
