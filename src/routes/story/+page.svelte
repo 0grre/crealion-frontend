@@ -11,7 +11,7 @@
 <div class="hero min-h-screen">
     <div class="hero-content flex-col lg:flex-row-reverse border-y border-0 border-green">
         <img src="{data.url + data.story.image.data[0].attributes.formats.large.url}" alt="{data.url + data.story.image.data[0].attributes.alternativeText}"
-             class="max-w-sm border border-0 border-green"/>
+             class="max-w-sm border-x border-y border-0 border-green"/>
         <div>
             <h1 class="text-5xl font-inter">{data.story.name}</h1>
             <p class="py-6">{data.story.bio}</p>

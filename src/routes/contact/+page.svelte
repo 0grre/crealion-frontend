@@ -8,14 +8,11 @@
     <meta name="description" content="{data.page.Head.content}"/>
 </svelte:head>
 
-<div class="min-h-screen flex">
-    <div class="w-1/2 border-r border-0 border-green bg-cover"
-         style="background-image: url('{data.url + data.contact.image.data.attributes.formats.large.url}');">
-    </div>
-    <div class="w-1/2 flex m-auto">
+<div class="hero min-h-screen" style="background-image: url('{data.url + data.contact.image.data.attributes.formats.large.url}');">
+    <div class="hero-content mt-12 bg-base border-x border-y border-0 border-green">
         <form class="container p-12 text-center">
-            <div class="form-control my-6">
-                <h2 class="text-xl font-bold uppercase my-3">{data.contact.title}</h2>
+            <div class="form-control mb-12">
+                <h2 class="text-2xl font-bold uppercase my-3">{data.contact.title}</h2>
                 <p class="text-xs">{data.contact.subtitle}</p>
             </div>
             <div class="form-control border-b border-0 border-green">
