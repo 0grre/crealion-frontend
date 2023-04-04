@@ -2,19 +2,19 @@
 export async function load() {
     const navigation = [
         {
-            url: "story",
+            url: "/story",
             name: "mon histoire"
         },
         {
-            url: "shop",
+            url: "/arts",
             name: "mes créations"
         },
         {
-            url: "contact",
+            url: "/contact",
             name: "me contacter"
         },
         {
-            url: "show",
+            url: "/show",
             name: "me rencontrer"
         },
     ]

@@ -5,16 +5,11 @@
 </script>
 
 <svelte:head>
-    <title>Crea Lion</title>
+    <title>CréaLion</title>
     <meta name="description" content="Home page"/>
 </svelte:head>
 
 <section class="hero min-h-screen flex flex-col justify-between">
-    <!--	<picture>-->
-    <!--		<source srcset={welcome} type="image/webp" />-->
-    <!--		<img src={welcome_fallback} alt="Welcome" />-->
-    <!--	</picture>-->
-
     <div class="hero-content text-center m-auto bg-base">
         <h1 class="font-inter title font-light uppercase">
             <span class="font-light italic">{data.home.title_1}</span>
