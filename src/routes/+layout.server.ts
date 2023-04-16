@@ -17,6 +17,10 @@ export async function load() {
             url: "/show",
             name: "me rencontrer"
         },
+        // {
+        //     url: "/privacy",
+        //     name: "mentions légales"
+        // },
     ]
 
     return {nav: navigation}
