@@ -1,7 +1,6 @@
 <script lang="ts">
     /** @type {import('./$types').PageData} */
     export let data;
-    export let nav;
 </script>
 
 <svelte:head>
@@ -12,7 +11,7 @@
 <section class="hero min-h-screen flex flex-col justify-between">
     <div class="hero-content text-center m-auto bg-base">
         <h1 class="font-inter title uppercase">
-            <span class="font-light italic">{data.home.title_1}</span>
+            <span class="italic">{data.home.title_1}</span>
             <span class="font-thin">{data.home.title_2}</span>
         </h1>
     </div>

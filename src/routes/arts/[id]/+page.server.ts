@@ -1,10 +1,11 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
     const url = import.meta.env.VITE_API_URL;
+    const token = import.meta.env.VITE_API_TOKEN;
 
     const pageResponse = await fetch(`${url}/api/pages/3?populate=*`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -13,7 +14,7 @@ export async function load({ params }) {
 
     const artResponse = await fetch(`${url}/api/arts/${params.id}?populate=*`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -23,5 +24,6 @@ export async function load({ params }) {
     return {
         page: pageResult.data.attributes,
         art: artResult.data.attributes,
+        url: url,
     }
 }
