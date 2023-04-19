@@ -10,7 +10,7 @@
 
 <div class="hero min-h-screen" style="background-image: url('{data.url + data.contact.image.data.attributes.formats.large.url}');">
     <div class="hero-content mt-12 bg-base border-x border-y border-0 border-green">
-        <form class="container p-12 text-center">
+        <form class="container p-12 text-center" >
             <div class="form-control mb-12">
                 <h2 class="text-2xl font-bold uppercase my-3">{data.contact.title}</h2>
                 <p class="text-xs">{data.contact.subtitle}</p>

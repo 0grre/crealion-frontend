@@ -1,16 +1,12 @@
 <script lang="ts">
     export let nav;
+    export let home;
 </script>
 <footer class="px-4 divide-y bg-base border-t border-0 border-green text-green">
     <div class="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
         <div class="lg:w-1/3">
-            <a rel="noopener noreferrer" href="#" class="flex justify-center space-x-3 lg:justify-start">
-                <div class="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" class="flex-shrink-0 w-5 h-5 rounded-full dark:text-gray-900">
-                        <path d="M18.2lion_679e42b66a.png66 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-                    </svg>
-                </div>
-                <span class="self-center uppercase text-2xl font-inter italic font-bold">crea<span class="font-thin font-inter not-italic">lion</span></span>
+            <a rel="noopener noreferrer" href="/" class="flex justify-center lg:justify-start">
+                <span class="self-center uppercase text-2xl font-inter italic font-bold">{home.title_1}<span class="font-thin font-inter not-italic">{home.title_2}</span></span>
             </a>
         </div>
         <div class="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -28,10 +24,10 @@
                 <h3 class="tracking-wide uppercase font-bold">Entreprise</h3>
                 <ul class="space-y-1">
                     <li>
-                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="#">Politique de confidentialité</a>
+                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="/privacy-policy">Politique de confidentialité</a>
                     </li>
                     <li>
-                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="#">Mentions légales</a>
+                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="/legal-notice">Mentions légales</a>
                     </li>
                 </ul>
             </div>

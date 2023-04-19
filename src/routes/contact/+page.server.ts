@@ -1,10 +1,11 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-    const url = import.meta.env.VITE_API_URL;
+    const url = import.meta.env.VITE_API_URL
+    const token = import.meta.env.VITE_API_TOKEN
 
     const pageResponse = await fetch(`${url}/api/pages/1?populate[0]=Head&populate[1]=form.fields&populate[2]=form.subjects`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -13,7 +14,7 @@ export async function load() {
 
     const contactResponse = await fetch(`${url}/api/contact?populate=*`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })

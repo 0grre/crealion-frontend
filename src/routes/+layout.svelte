@@ -37,7 +37,7 @@
 
         <!-- Page content here -->
         <slot nav={data.nav}/>
-        <Footer nav={data.nav}/>
+        <Footer nav={data.nav} home="{data.home}"/>
 
     </div>
     <div class="drawer-side">

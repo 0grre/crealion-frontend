@@ -1,9 +1,11 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
     const url = import.meta.env.VITE_API_URL
+    const token = import.meta.env.VITE_API_TOKEN
+
     const homeResponse = await fetch(`${url}/api/home?populate=*`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -12,7 +14,7 @@ export async function load() {
 
     const pagesResponse = await fetch(`${url}/api/home?populate=*`, {
         headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -36,11 +38,10 @@ export async function load() {
             url: "/show",
             name: "me rencontrer"
         },
-        // {
-        //     url: "/privacy",
-        //     name: "mentions légales"
-        // },
     ]
 
-    return {nav: navigation}
+    return {
+        nav: navigation,
+        home: home.data.attributes
+    }
 }
