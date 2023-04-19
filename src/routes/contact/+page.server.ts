@@ -1,20 +1,19 @@
 /** @type {import('./$types').PageServerLoad} */
+import { VITE_API_URL, VITE_API_TOKEN } from '$env/static/private';
 export async function load() {
-    const url = import.meta.env.VITE_API_URL
-    const token = import.meta.env.VITE_API_TOKEN
 
-    const pageResponse = await fetch(`${url}/api/pages/1?populate[0]=Head&populate[1]=form.fields&populate[2]=form.subjects`, {
+    const pageResponse = await fetch(`${VITE_API_URL}/api/pages/1?populate[0]=Head&populate[1]=form.fields&populate[2]=form.subjects`, {
         headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${VITE_API_TOKEN}`,
             Accept: 'application/json',
         },
     })
 
     const pageResult = await pageResponse.json()
 
-    const contactResponse = await fetch(`${url}/api/contact?populate=*`, {
+    const contactResponse = await fetch(`${VITE_API_URL}/api/contact?populate=*`, {
         headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${VITE_API_TOKEN}`,
             Accept: 'application/json',
         },
     })
@@ -24,6 +23,6 @@ export async function load() {
     return {
         contact: contactResult.data.attributes,
         page: pageResult.data.attributes,
-        url: url
+        url: VITE_API_URL
     }
 }
