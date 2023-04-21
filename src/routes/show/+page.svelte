@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-    <title>CréaLion - {data.page.Head.title}</title>
+    <title>{data.page.Head.title}</title>
     <meta name="description" content="{data.page.Head.content}"/>
 </svelte:head>
 

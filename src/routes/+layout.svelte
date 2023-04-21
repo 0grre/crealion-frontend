@@ -1,7 +1,6 @@
 <script>
     import './styles.css';
     import Footer from './components/footer.svelte'
-
     export let data;
 </script>
 

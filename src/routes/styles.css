@@ -16,15 +16,14 @@
     font-family: 'Source Sans pro', sans-serif;
 }
 
+p {
+    font-family: 'Montserrat', sans-serif;
+}
 .title {
     font-size: 10rem;
     line-height: 1;
 }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-}
-
 h2 {
-    font-size: 1rem
+    @apply text-2xl mt-6;
 }

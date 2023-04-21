@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>CréaLion</title>
+    <title>CREALION</title>
     <meta name="description" content="Home page"/>
 </svelte:head>
 

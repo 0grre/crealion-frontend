@@ -5,15 +5,13 @@
 </script>
 
 <svelte:head>
-    <title>CréaLion - {data.page.Head.title}</title>
+    <title>{data.page.Head.title}</title>
     <meta name="description" content="{data.page.Head.content}"/>
 </svelte:head>
 
-<section class="hero min-h-screen flex flex-col justify-between">
-    <div  class="container p-12 text-center">
-        <h1>{data.privacyPolicy.title}</h1>
-        <SvelteMarkdown source="{data.privacyPolicy.text}" />
-    </div>
+<section class="flex flex-col justify-between lg:w-2/3 p-24 my-12">
+        <h1 class="text-3xl">{data.privacyPolicy.title}</h1>
+        <SvelteMarkdown options="{{mangle:false}}"  source="{data.privacyPolicy.text}" />
 </section>
 
 
