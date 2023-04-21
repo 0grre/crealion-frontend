@@ -29,6 +29,7 @@
 		"daisyui": "^2.50.2",
 		"dotenv": "^16.0.3",
 		"svelte-markdown": "^0.2.3",
+		"tarteaucitronjs": "^1.11.0",
 		"update": "^0.7.4"
 	}
 }

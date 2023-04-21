@@ -29,6 +29,9 @@
                     <li>
                         <a rel="noopener noreferrer" class="link link-hover capitalize" href="/legal-notice">Mentions légales</a>
                     </li>
+                    <li>
+                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="/#cookies">Cookies</a>
+                    </li>
                 </ul>
             </div>
             <div class="space-y-3">

@@ -1,6 +1,8 @@
 <script>
     import './styles.css';
     import Footer from './components/footer.svelte'
+    import logo from '$lib/images/logo.png';
+
     export let data;
 </script>
 
@@ -20,7 +22,11 @@
                     </svg>
                 </label>
             </div>
-            <div class="flex-1 px-2 mx-2"><a href="/">CL</a></div>
+            <div class="flex-1 px-2 mx-2">
+                <a href="/">
+                    <img class="w-10" src="{logo}" alt="logo">
+                </a>
+            </div>
             <div class="flex-none hidden lg:block">
                 <ul class="menu menu-horizontal uppercase">
 
