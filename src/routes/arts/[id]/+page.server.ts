@@ -1,19 +1,20 @@
 /** @type {import('./$types').PageServerLoad} */
-import { VITE_API_URL, VITE_API_TOKEN } from '$env/static/private';
 export async function load({ params }) {
+    const url = import.meta.env.VITE_API_URL;
+    const token = import.meta.env.VITE_API_TOKEN;
 
-    const pageResponse = await fetch(`${VITE_API_URL}/api/pages/3?populate=*`, {
+    const pageResponse = await fetch(`${url}/api/pages/3?populate=*`, {
         headers: {
-            Authorization: `Bearer ${VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
 
     const pageResult = await pageResponse.json()
 
-    const artResponse = await fetch(`${VITE_API_URL}/api/arts/${params.id}?populate=*`, {
+    const artResponse = await fetch(`${url}/api/arts/${params.id}?populate=*`, {
         headers: {
-            Authorization: `Bearer ${VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
@@ -23,6 +24,6 @@ export async function load({ params }) {
     return {
         page: pageResult.data.attributes,
         art: artResult.data.attributes,
-        url: VITE_API_URL,
+        url: url,
     }
 }

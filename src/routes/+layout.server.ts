@@ -1,19 +1,20 @@
 /** @type {import('./$types').PageServerLoad} */
-import { VITE_API_URL, VITE_API_TOKEN } from '$env/static/private';
 export async function load() {
+    const url = import.meta.env.VITE_API_URL
+    const token = import.meta.env.VITE_API_TOKEN
 
-    const homeResponse = await fetch(`${VITE_API_URL}/api/home?populate=*`, {
+    const homeResponse = await fetch(`${url}/api/home?populate=*`, {
         headers: {
-            Authorization: `Bearer ${VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
 
     const home = await homeResponse.json()
 
-    const pagesResponse = await fetch(`${VITE_API_URL}/api/home?populate=*`, {
+    const pagesResponse = await fetch(`${url}/api/home?populate=*`, {
         headers: {
-            Authorization: `Bearer ${VITE_API_TOKEN}`,
+            Authorization: `Bearer ${token}`,
             Accept: 'application/json',
         },
     })
