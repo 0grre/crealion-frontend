@@ -27,3 +27,28 @@ export async function load() {
         url: url
     }
 }
+
+/** @type {import('./$types').Actions} */
+export const actions = {
+    mail: async ({ request }) => {
+        const url = import.meta.env.VITE_API_URL
+        const token = import.meta.env.VITE_API_TOKEN
+
+        const body = await request.formData();
+
+        console.log(body)
+
+        const contactResponse = await fetch(`${url}/api/contact/mail`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/x-www-form-urlencoded',
+            },
+            method: 'POST',
+            body: body
+        })
+
+        console.log(contactResponse)
+
+        return { success: true };
+    }
+};

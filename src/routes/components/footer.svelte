@@ -15,7 +15,9 @@
                 <ul class="space-y-1">
                     {#each nav as n}
                         <li>
-                            <a href="{n.url}" rel="noopener noreferrer" class="link link-hover capitalize">{n.name}</a>
+                            {#if n.attributes.Head.isInMenu}
+                                <a href="{n.attributes.Head.url}" rel="noopener noreferrer" class="link link-hover capitalize">{n.attributes.Head.title}</a>
+                            {/if}
                         </li>
                     {/each}
                 </ul>
@@ -23,12 +25,13 @@
             <div class="space-y-3">
                 <h3 class="tracking-wide uppercase font-bold">Entreprise</h3>
                 <ul class="space-y-1">
-                    <li>
-                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="/privacy-policy">Politique de confidentialité</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" class="link link-hover capitalize" href="/legal-notice">Mentions légales</a>
-                    </li>
+                    {#each nav as n}
+                        <li>
+                            {#if n.attributes.Head.isInMenu === false && n.attributes.Head.title !== "Crea Lion"}
+                                <a href="{n.attributes.Head.url}" rel="noopener noreferrer" class="link link-hover capitalize">{n.attributes.Head.title}</a>
+                            {/if}
+                        </li>
+                    {/each}
                     <li>
                         <a rel="noopener noreferrer" class="link link-hover capitalize" href="/#cookies">Cookies</a>
                     </li>

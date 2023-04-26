@@ -12,7 +12,7 @@ export async function load() {
 
     const home = await homeResponse.json()
 
-    const pagesResponse = await fetch(`${url}/api/home?populate=*`, {
+    const pagesResponse = await fetch(`${url}/api/pages?populate=*`, {
         headers: {
             Authorization: `Bearer ${token}`,
             Accept: 'application/json',
@@ -21,27 +21,10 @@ export async function load() {
 
     const pages = await pagesResponse.json()
 
-    const navigation = [
-        {
-            url: "/story",
-            name: "mon histoire"
-        },
-        {
-            url: "/arts",
-            name: "mes créations"
-        },
-        {
-            url: "/contact",
-            name: "me contacter"
-        },
-        {
-            url: "/show",
-            name: "me rencontrer"
-        },
-    ]
+    const nav = pages.data.sort((a, b) => a.attributes.Head.order - b.attributes.Head.order);
 
     return {
-        nav: navigation,
+        nav: nav,
         home: home.data.attributes
     }
 }

@@ -33,7 +33,9 @@
                     <!-- Navbar menu content here -->
                     {#each data.nav as n}
                         <li class="hover:overline">
-                            <a href="{n.url}">{n.name}</a>
+                            {#if n.attributes.Head.isInMenu}
+                                <a href="{n.attributes.Head.url}">{n.attributes.Head.title}</a>
+                            {/if}
                         </li>
                     {/each}
                 </ul>
@@ -52,7 +54,9 @@
             <!-- Sidebar content here -->
             {#each data.nav as n}
                 <li class="hover:overline">
-                    <a href="{n.url}">{n.name}</a>
+                    {#if n.attributes.Head.isInMenu}
+                        <a href="{n.attributes.Head.url}">{n.attributes.Head.title}</a>
+                    {/if}
                 </li>
             {/each}
         </ul>
