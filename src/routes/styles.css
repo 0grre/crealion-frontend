@@ -19,9 +19,12 @@
 p {
     font-family: 'Montserrat', sans-serif;
 }
-.title {
-    font-size: 10rem;
-    line-height: 1;
+
+@layer utilities {
+    .title {
+        font-size: 10rem;
+        line-height: 1;
+    }
 }
 
 h2 {

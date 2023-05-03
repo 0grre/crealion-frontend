@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>{data.page.Head.title + " - " + data.art.name}</title>
+    <title>{data.page.Head.title + " - " + data.art.name} &middot; CREALION</title>
     <meta name="description" content="{data.page.Head.content}"/>
 </svelte:head>
 
