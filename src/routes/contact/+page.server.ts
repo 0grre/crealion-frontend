@@ -1,3 +1,5 @@
+import { fail } from '@sveltejs/kit';
+
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
     const url = import.meta.env.VITE_API_URL
@@ -35,8 +37,6 @@ export const actions = {
         const token = import.meta.env.VITE_API_TOKEN
 
         const body = await request.formData();
-
-        console.log(body)
 
         const contactResponse = await fetch(`${url}/api/contact/mail`, {
             headers: {

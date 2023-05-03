@@ -23,14 +23,12 @@
                 </label>
             </div>
             <div class="flex-1 px-2 mx-2">
-                <a href="/">
+                <a class="hidden lg:block" href="/">
                     <img class="w-10" src="{logo}" alt="logo">
                 </a>
             </div>
             <div class="flex-none hidden lg:block">
                 <ul class="menu menu-horizontal uppercase">
-
-                    <!-- Navbar menu content here -->
                     {#each data.nav as n}
                         <li class="hover:overline">
                             {#if n.attributes.Head.isInMenu}
@@ -49,9 +47,21 @@
     </div>
     <div class="drawer-side">
         <label for="my-drawer-3" class="drawer-overlay"></label>
-        <ul class="menu p-4 w-80 bg-base-100 uppercase">
+        <ul class="menu p-4 w-65 md:w-80 bg-base uppercase border-r border-0 border-green">
+            <div class="flex-1">
+                <div class="flex flex-row justify-between w-full">
+                    <a href="/">
+                        <img class="w-10" src="{logo}" alt="logo">
+                    </a>
+                    <label for="my-drawer-3" class="btn btn-square btn-ghost">
+                        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                    </label>
+                </div>
+
+            </div>
 
             <!-- Sidebar content here -->
+            <div class="border-0 border-t border-green">
             {#each data.nav as n}
                 <li class="hover:overline">
                     {#if n.attributes.Head.isInMenu}
@@ -59,6 +69,7 @@
                     {/if}
                 </li>
             {/each}
+            </div>
         </ul>
     </div>
 </main>

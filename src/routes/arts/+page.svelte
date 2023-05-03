@@ -19,7 +19,6 @@
 
     </div>
     <div class="lg:w-4/5 flex flex-col mx-auto">
-
         <div class="container mt-12 py-12 px-6">
             <div class="lg:col-span-3">
                 <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -35,7 +34,6 @@
                                     <p class="text-sm font-medium uppercase tracking-widest text-green">
                                         {art.attributes.dimensions}
                                     </p>
-
                                     <p class="text-xl font-bold text-white sm:text-2xl">{art.attributes.name}</p>
                                 </div>
                                 <div class="mt-32 sm:mt-48 lg:mt-64">

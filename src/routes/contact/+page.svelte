@@ -27,7 +27,7 @@
 </svelte:head>
 
 <div class="hero min-h-screen" style="background-image: url('{data.url + data.contact.image.data.attributes.formats.large.url}');">
-    <div class="hero-content mt-12 bg-base lg:border-x border-y border-0 border-green">
+    <div class="hero-content mt-12 bg-base border-x border-y border-0 border-green">
         <form class="container lg:p-12 text-center" method="POST" action="?/mail">
             <div class="form-control mb-12">
                 <h2 class="text-2xl font-bold uppercase my-3">{data.contact.title}</h2>
@@ -66,6 +66,8 @@
             <div class="form-control mt-6">
                 <button class="btn bg-green hover" type="submit">{data.page.form.button}</button>
             </div>
+            {#if contactForm?.missing}<p class="error">The email field is required</p>{/if}
+            {#if contactForm?.incorrect}<p class="error">Invalid credentials!</p>{/if}
         </form>
     </div>
 </div>

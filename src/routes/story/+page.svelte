@@ -19,7 +19,7 @@
         </div>
 
         <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full border border-0 border-green">
+            <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full border-x border-y border-0 border-green">
                 <img src="{data.url + data.story.image.data[0].attributes.formats.large.url}"
                      alt="{data.url + data.story.image.data[0].attributes.alternativeText}"
                      class="absolute inset-0 h-full w-full object-cover"/>
