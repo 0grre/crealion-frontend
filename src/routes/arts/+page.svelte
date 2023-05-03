@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section class="flex">
-    <div class="w-1/5 border-r border-0 border-green bg-cover">
+    <div class="hidden lg:block lg:w-1/5 border-r border-0 border-green bg-cover">
         <div class="container p-12 border-b border-0 border-green">
             <div class="form-control mt-12 text-center">
                 <h2 class="text-2xl font-bold uppercase my-3">{data.shop.title}</h2>
@@ -18,7 +18,7 @@
         </div>
 
     </div>
-    <div class="w-4/5 flex flex-col mx-auto">
+    <div class="lg:w-4/5 flex flex-col mx-auto">
 
         <div class="container mt-12 py-12 px-6">
             <div class="lg:col-span-3">

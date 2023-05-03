@@ -9,14 +9,12 @@
 </svelte:head>
 
 <section class="pt-6">
-    <div class="relative mx-auto max-w-screen-xl border-0 border-x border-green">
+    <div class="relative mx-auto max-w-screen-xl border-0 lg:border-x border-green">
         <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2 pl-6">
-            <div class="grid grid-cols-2 gap-4 md:grid-cols-1 mx-6 py-24">
-                <img
-                        alt="{data.art.images.data[0].attributes.alternativeText}"
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-1 mx-6 pt-24 lg:py-24">
+                <img alt="{data.art.images.data[0].attributes.alternativeText}"
                         src="{data.url + data.art.images.data[0].attributes.formats.large.url}"
-                        class="aspect-square w-full object-cover border-0 border-y border-x border-green"
-                />
+                        class="aspect-square w-full object-cover border-0 border-y border-x border-green"/>
 
                 <div class="grid grid-cols-2 gap-4 lg:mt-6">
                     {#if data.art.images.data[1]}
