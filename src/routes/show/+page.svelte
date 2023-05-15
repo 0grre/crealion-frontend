@@ -23,13 +23,13 @@
     <div class="lg:w-1/2 mt-12 lg:mt-0 flex flex-col my-auto">
 
     <div class="container p-4 lg:p-12">
-    <div class="form-control mb-12 text-center">
+    <div class="form-control my-12 text-center">
         <h2 class="text-2xl font-bold uppercase my-3">{data.show.title}</h2>
         <p class="text-xs">{data.show.subtitle}</p>
     </div>
 
     {#each data.events as event}
-        <div class="border-l border-b border-0 border-green my-8 p-4">
+        <div class="border-l border-b border-0 border-green my-12 p-4">
             <div class="flex justify-between">
                 <div class="flex flex-col justify-end">
                 <h2 class="text-6xl lg:text-8xl font-light italic normal-case">{new Date(event.attributes.dateStart).getDate()}
